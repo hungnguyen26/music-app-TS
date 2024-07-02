@@ -42,6 +42,10 @@ margin-bottom: 0;
 font-size: 28px;
 font-weight: 600;
 color: #9b4ddf;
-margin-left: 100px;
+/* margin-left: 100px; */
 }
   /* end box head  */
+  .containner.my-3{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
