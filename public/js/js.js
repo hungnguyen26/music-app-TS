@@ -28,5 +28,25 @@ if(aplayer){
         avatar.style.animationPlayState = "paused";
     });
 }
-
 //end APlayer
+
+
+// btn like song
+const btnLike = document.querySelector("[btn-like]");
+if(btnLike){
+    btnLike.addEventListener("click",()=>{
+        const idSong = btnLike.getAttribute("btn-like");
+        const isActive =  btnLike.classList.contains("active");
+        const typeLike = isActive ? "dislike" : "like";
+
+        fetch(`/songs/like/${typeLike}/${idSong}`, { method: "PATCH"})
+            .then(res => res.json())
+            .then(data =>{
+                const span = btnLike.querySelector("span");
+                span.innerHTML = `${data.like} thích`;
+
+                btnLike.classList.toggle("active");
+            })
+    })
+}
+// end btn like song
