@@ -6,5 +6,7 @@ const router: Router = Router();
 
 router.get("/:slugTopic", controller.songs );
 
+router.get("/detail/:slugSong", controller.detail );
+
 
 export const songsRouter: Router =  router;

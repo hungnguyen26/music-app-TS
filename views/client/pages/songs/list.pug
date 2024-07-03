@@ -13,7 +13,7 @@ block main
                     div(class="song-item")
                         div(class="inner-img")
                             a(href=`/songs/detail/${song.slug}`)
-                                img(src="/img/ZingMP3logo.svg")
+                                img(src=song.avatar)
                         div(class="inner-content")
                             div(class="inner-title")
                                 a(href=`/songs/detail/${song.slug}`) #{song.title}

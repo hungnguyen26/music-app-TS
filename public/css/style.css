@@ -110,3 +110,131 @@ color: #9b4ddf;
   color: #585858
 }
 /* end song item */
+
+.singer-detail {
+  .containner {
+      margin: 1.5rem 0;
+
+      .row {
+          .col-12 {
+              .inner-tile {
+                  font-size: 2rem;
+                  font-weight: bold;
+                  margin-bottom: 1rem;
+                  color: #333;
+                  text-align: center;
+              }
+
+              .inner-actions {
+                  display: flex;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                  gap: 1.5rem;
+                  margin-bottom: 2rem;
+                  padding: 1rem;
+                  background-color: #f9f9f9;
+                  border-radius: 8px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                  .inner-action {
+                      display: flex;
+                      align-items: center;
+                      gap: 0.5rem;
+                      font-size: 1rem;
+                      color: #555;
+                      transition: transform 0.3s;
+
+                      &:hover {
+                          transform: translateY(-5px);
+                          color: #000;
+                      }
+
+                      i {
+                          font-size: 1.2rem;
+                      }
+                  }
+              }
+
+              .inner-play {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-bottom: 2rem;
+
+                  .inner-avatar {
+                      margin-right: 1rem;
+
+                      img {
+                          width: 100px;
+                          height: 100px;
+                          border-radius: 50%;
+                          border: 2px solid #ddd;
+                          animation: rotate 5s linear infinite;
+                      }
+                  }
+
+                  .inner-audio {
+                      audio {
+                          width: 100%;
+                          max-width: 400px;
+                      }
+                  }
+              }
+
+              .inner-desc {
+                  margin: 0 100px 2rem;
+                  padding: 1rem;
+                  border: 1px solid #ddd;
+                  border-radius: 8px;
+                  text-align: center;
+
+                  .inner-label {
+                      font-weight: bold;
+                      font-size: 1.2rem;
+                      margin-bottom: 0.5rem;
+                      color: #333;
+                  }
+
+                  .inner-text {
+                      font-size: 1rem;
+                      line-height: 1.5;
+                      color: #555;
+                  }
+              }
+          }
+      }
+  }
+}
+.singer-detail .containner .row .col-12 .inner-play {
+  display: flex;
+  flex-direction: column; /* Để các phần tử bên trong sắp xếp dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  margin: 0 auto; /* Đặt margin auto để căn giữa theo chiều ngang */
+  text-align: center; /* Căn nội dung trong .inner-play theo chiều ngang */
+  max-width: 600px; /* Điều chỉnh chiều rộng tối đa của .inner-play */
+  padding: 2rem; /* Đặt padding cho khoảng cách xung quanh .inner-play */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.singer-detail .containner .row .col-12 .inner-play .inner-avatar {
+  margin-bottom: 1rem; /* Khoảng cách giữa avatar và audio player */
+}
+
+.singer-detail .containner .row .col-12 .inner-play .inner-audio {
+  width: 100%; /* Chiều rộng của audio player */
+  max-width: 400px; /* Chiều rộng tối đa của audio player */
+}
+
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
