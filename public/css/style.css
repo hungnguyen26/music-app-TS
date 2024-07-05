@@ -206,12 +206,26 @@ color: #9b4ddf;
       }
   }
 }
+/* btn like */
 .singer-detail .containner .row .col-12 .inner-actions .inner-action.inner-like.active {
   color: #6e4888; /* Màu bạn muốn thay đổi khi nhấp vào */
 }
 .singer-detail .containner .row .col-12 .inner-actions .inner-action.inner-like.active i{
   font-weight: 900;
 }
+
+/* btn heart */
+.singer-detail .containner .row .col-12 .inner-actions .inner-action{
+  cursor: pointer;
+}
+.singer-detail .containner .row .col-12 .inner-actions .inner-action.inner-heart.active {
+  
+  color:  #9b4ddf ;
+}
+.singer-detail .containner .row .col-12 .inner-actions .inner-action.inner-heart.active i{
+  font-weight: 900;
+}
+
 .singer-detail .containner .row .col-12 .inner-play {
   display: flex;
   flex-direction: column; /* Để các phần tử bên trong sắp xếp dọc */
