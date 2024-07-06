@@ -52,18 +52,21 @@ if(btnLike){
 // end btn like song
 
 // btn favorite song
-const btnFavorite = document.querySelector("[btn-favorite]");
-if(btnFavorite){
-    btnFavorite.addEventListener("click",()=>{
-        const idSong = btnFavorite.getAttribute("btn-favorite");
-        const isActive =  btnFavorite.classList.contains("active");
-        const typeFavorite = isActive ? "unfavorite" : "favorite";
-
-        fetch(`/songs/favorite/${typeFavorite}/${idSong}`, { method: "PATCH"})
-            .then(res => res.json())
-            .then(data =>{
-                btnFavorite.classList.toggle("active");
-            })
+const listbtnFavorite = document.querySelectorAll("[btn-favorite]");
+if(listbtnFavorite.length > 0 ){
+    listbtnFavorite.forEach((btnFavorite)=>{
+        btnFavorite.addEventListener("click",()=>{
+            const idSong = btnFavorite.getAttribute("btn-favorite");
+            const isActive =  btnFavorite.classList.contains("active");
+            const typeFavorite = isActive ? "unfavorite" : "favorite";
+    
+            fetch(`/songs/favorite/${typeFavorite}/${idSong}`, { method: "PATCH"})
+                .then(res => res.json())
+                .then(data =>{
+                    btnFavorite.classList.toggle("active");
+                })
+        })
     })
+    
 }
 // end btn favorite song
