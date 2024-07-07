@@ -271,3 +271,31 @@ color: #9b4ddf;
   }
 }
 
+
+/* form-search */
+.form-search{
+  background-color: #2f2739 ;
+  border-radius: 22px 0px 0px 22px;
+  border: none;
+  color: #fff;
+}
+.form-control.form-search::placeholder {
+  color: white;
+  font-weight: 100;
+}
+.form-control.form-search:focus {
+  background-color: #9b4de0 ; 
+  color: #fff;
+  border: none;
+  outline: none; 
+}
+.btn-search{
+  border-radius: 0px 22px 22px 0px;
+  background-color: #9b4de0;
+  border: none;
+}
+.btn-search:hover{
+  background-color: 
+  #c273ed ;
+}
+/* end form-search */

@@ -5,8 +5,26 @@ header.header
                 .inner-logo
                     a(href="/")
                         img(src="/img/ZingMP3logo.svg", alt="Logo") 
+            .col-5  
+                .box-search
+                    form(
+                        action="/search/result"
+                        method="get"
+                    ) 
+                        div(class="form-group d-flex mb-0")
+                            input(
+                                type="text"
+                                placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát..."
+                                class="form-control form-search"
+                                name="key"
+                                value=key
+                            )
+                            button(
+                                type="submit"
+                                class="btn btn-primary btn-search"
+                            ) <i class="fa-solid fa-magnifying-glass"></i>  
 
-            .col-9 
+            .col-4 
                 .inner-menu
                     ul
                         li
