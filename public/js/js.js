@@ -70,3 +70,43 @@ if(listbtnFavorite.length > 0 ){
     
 }
 // end btn favorite song
+
+// gợi ý tìm kiếm
+const boxSearch = document.querySelector(".box-search");
+if(boxSearch){
+    const input = boxSearch.querySelector("input[name='key']");
+    const boxSuggest = boxSearch.querySelector(".inner-suggest");
+
+
+    input.addEventListener("keyup",()=>{
+        const keyword = input.value;
+
+        fetch(`/search/suggest?key=${keyword}`)
+                .then(res => res.json())
+                .then(data =>{
+                    const songs = data.songs;
+                    if(songs.length > 0){
+                        boxSuggest.classList.add("show")
+
+                        const htmls = songs.map(song => {
+                            return `
+                                <a class="inner-item" href="/songs/deatil/${song.slug}">
+                                    <div class="inner-img"><img src="${song.avatar}"></div>
+                                    <div class="inner-info">
+                                        <div class="inner-title">${song.title}</div>
+                                        <div class="inner-singer"><i class="fa-solid fa-microphone-lines"></i>${song.infoSinger.fullName}</div>
+                                    </div>
+                                </a>
+                            `
+                        })
+
+                        const boxList = boxSearch.querySelector(".inner-list");
+                        boxList.innerHTML = htmls.join("");
+                    }else{
+                        boxSuggest.classList.remove("show")
+                    }
+                    
+                })
+    })
+}
+// end gợi ý tìm kiếm
