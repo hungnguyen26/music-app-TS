@@ -27,6 +27,15 @@ if(aplayer){
     ap.on('pause', function () {
         avatar.style.animationPlayState = "paused";
     });
+
+    ap.on('ended', function () {
+        fetch(`/songs/listen/${datasong._id}`, { method: "PATCH"})
+            .then(res => res.json())
+            .then(data =>{
+                const elementListen = document.querySelector(".singer-detail .inner-listen span");
+                elementListen.innerHTML = `${data.listen} Lượt nghe`;
+            })
+    });
 }
 //end APlayer
 
