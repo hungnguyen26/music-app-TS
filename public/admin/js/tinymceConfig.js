@@ -1,5 +1,5 @@
 const listTextareaMCE = document.querySelectorAll("[textarea-mce]");
-
+console.log(listTextareaMCE);
 if(listTextareaMCE.length > 0){
     listTextareaMCE.forEach((textarea) => {
         const id = textarea.id;
