@@ -1,6 +1,7 @@
 import express,{ Express } from "express";
 import * as database from "./config/database";
 import dotenv from "dotenv";
+import methodOveride from "method-override"
 
 import clientRouter from "./routers/client/index.router";
 import adminRouter from "./routers/admin/index.router";
@@ -19,6 +20,8 @@ const port: number | String = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static("public"));
+
+app.use(methodOveride("_method"));
 
 app.set("views","./views");
 app.set("view engine","pug");
