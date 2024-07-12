@@ -99,7 +99,7 @@ if(boxSearch){
 
                         const htmls = songs.map(song => {
                             return `
-                                <a class="inner-item" href="/songs/deatil/${song.slug}">
+                                <a class="inner-item" href="/songs/detail/${song.slug}">
                                     <div class="inner-img"><img src="${song.avatar}"></div>
                                     <div class="inner-info">
                                         <div class="inner-title">${song.title}</div>

@@ -13,11 +13,23 @@ if (uploadImg) {
     }
   });
 
-  const deleteImg = document.querySelector(".delete-img");
-
-  deleteImg.addEventListener("click", () => {
-    uploadImgInput.value = "";
-    uploadImgpreview.src = "";
-  });
 }
 // end preview upload ảnh
+
+// preview upload audio
+const uploadAudio= document.querySelector("[upload-audio]");
+if (uploadAudio) {
+  const uploadAudioInput = uploadAudio.querySelector("[upload-audio-input]");
+  const uploadAudioPlay = uploadAudio.querySelector("[upload-audio-play]");
+  const source = uploadAudioPlay.querySelector("source");
+  console.log(source);
+  uploadAudioInput.addEventListener("change", (event) => {
+    if (event.target.files.length) {
+
+      source.src = URL.createObjectURL(event.target.files[0]);
+      uploadAudioPlay.load();
+    }
+  });
+
+}
+// end preview upload audio
