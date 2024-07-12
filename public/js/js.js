@@ -6,13 +6,18 @@ if(aplayer){
     // console.log(datasong);
     let datasinger = aplayer.getAttribute("data-singer");
     datasinger = JSON.parse(datasinger);
+
     const ap = new APlayer({
         container: aplayer,
+        lrcType: 1,
         audio: [{
             name: datasong.title,
             artist: datasinger.fullName,
             url: datasong.audio,
-            cover: datasong.avatar
+            cover: datasong.avatar,
+            lrc: `
+                ${datasong.lyrics}
+            `
         }],
         autoplay:true
     });
