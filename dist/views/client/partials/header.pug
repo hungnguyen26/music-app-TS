@@ -1,0 +1,45 @@
+header.header
+    .container
+        .row.align-items-center
+            .col-3  
+                .inner-logo
+                    a(href="/")
+                        img(src="/img/ZingMP3logo.svg", alt="Logo") 
+            .col-5  
+                .box-search
+                    form(
+                        action="/search/result"
+                        method="get"
+                    ) 
+                        div(class="form-group d-flex mb-0")
+                            input(
+                                type="text"
+                                placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát..."
+                                class="form-control form-search"
+                                name="key"
+                                value=key
+                            )
+                            button(
+                                type="submit"
+                                class="btn btn-primary btn-search"
+                            ) <i class="fa-solid fa-magnifying-glass"></i>  
+                    
+                    .inner-suggest
+                        .inner-list
+                            //- a(href=`/songs/deatil/:slugSong` class="inner-item") 
+                            //-     .inner-img
+                            //-         img(src="/js/logo.png")
+                            //-     .inner-info 
+                            //-         .inner-title Cắt đôi nổi sầu
+                            //-         .inner-singer
+                            //-             <i class="fa-solid fa-microphone-lines"></i> ÁNG SDASDS
+
+            .col-4 
+                .inner-menu
+                    ul
+                        li
+                            a(href="/") <i class="fa-solid fa-house"></i> Trang chủ
+                        li  
+                            a(href="/topics") <i class="fa-solid fa-music"></i> Chủ đề 
+                        li  
+                            a(href="/favorite-songs") <i class="fa-solid fa-heart"></i> Yêu thích

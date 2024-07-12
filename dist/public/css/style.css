@@ -1,0 +1,375 @@
+/* header */
+.header {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    background-color: #231b2e;
+  }
+.header .inner-logo img {
+    max-height: 50px;
+    max-width: 100px;
+}
+.header .inner-menu > ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+flex-wrap: wrap;
+}
+.header .inner-menu > ul > li > a {
+margin-left: 20px;
+text-decoration: none;
+color: #fff;
+}
+/* end  header */
+
+/* footer */
+.footer {
+background-color: #2f2639;
+color: #82529e;
+text-align: center;
+padding: 10px;
+}
+/* END footer */
+
+/* box head  */
+.box-head {
+margin-bottom: 30px;
+}
+.box-head .inner-title {
+margin-bottom: 0;
+font-size: 28px;
+font-weight: 600;
+color: #9b4ddf;
+/* margin-left: 100px; */
+}
+  /* end box head  */
+  .containner.my-3{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+/* song item */
+.song-item{
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.song-item .inner-img{
+  width: 115px;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.song-item .inner-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.song-item .inner-content{
+  padding: 10px;
+  flex:1;
+}
+.song-item .inner-content .inner-title{
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1 ;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  margin-bottom: 5px;
+}
+.song-item .inner-content .inner-title a{
+  font-size: 14px;
+  font-weight: 700;
+  color: #4d007d;
+  text-decoration: none;
+
+}
+.song-item .inner-content .inner-title a:hover{
+  color:#7c00c8;
+  text-decoration: none;
+}
+.song-item .inner-content .inner-singer{
+  font-size: 13px;
+  font-weight: 500;
+  color: #282828;
+  margin-bottom: 2px;
+}
+.song-item .inner-content .inner-like{
+  font-size: 13px;
+  font-weight: 500;
+  color: #004cd0;
+  margin-bottom: 2px;
+
+}
+.song-item .inner-content .inner-time{
+  font-size: 13px;
+  font-weight: 500;
+  color: #585858
+}
+.song-item .inner-content .inner-heart{
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+.song-item .inner-content .inner-heart.active{
+  color: #b90000
+}
+.song-item .inner-content .inner-heart.active i{
+    font-weight: 900;
+}
+/* end song item */
+
+
+.singer-detail {
+  .containner {
+      margin: 1.5rem 0;
+
+      .row {
+          .col-12 {
+              .inner-tile {
+                  font-size: 2rem;
+                  font-weight: bold;
+                  margin-bottom: 1rem;
+                  color: #333;
+                  text-align: center;
+              }
+
+              .inner-actions {
+                  display: flex;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                  gap: 1.5rem;
+                  margin-bottom: 2rem;
+                  padding: 1rem;
+                  background-color: #f9f9f9;
+                  border-radius: 8px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                  .inner-action {
+                      display: flex;
+                      align-items: center;
+                      gap: 0.5rem;
+                      font-size: 1rem;
+                      color: #555;
+                      transition: transform 0.3s;
+
+                      &:hover {
+                          transform: translateY(-5px);
+                          color: #000;
+                      }
+
+                      i {
+                          font-size: 1.2rem;
+                      }
+                  }
+              }
+
+              .inner-play {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-bottom: 2rem;
+
+                  .inner-avatar {
+                      margin-right: 1rem;
+
+                      img {
+                          width: 100px;
+                          height: 100px;
+                          border-radius: 50%;
+                          border: 2px solid #ddd;
+                          animation: rotate 5s linear infinite;
+                      }
+                  }
+
+                  .inner-audio {
+                      audio {
+                          width: 100%;
+                          max-width: 400px;
+                      }
+                  }
+              }
+
+              .inner-desc {
+                  margin: 0 100px 2rem;
+                  padding: 1rem;
+                  border: 1px solid #ddd;
+                  border-radius: 8px;
+                  text-align: center;
+
+                  .inner-label {
+                      font-weight: bold;
+                      font-size: 1.2rem;
+                      margin-bottom: 0.5rem;
+                      color: #333;
+                  }
+
+                  .inner-text {
+                      font-size: 1rem;
+                      line-height: 1.5;
+                      color: #555;
+                      white-space: pre;
+                  }
+              }
+          }
+      }
+  }
+}
+/* btn like */
+.singer-detail .containner .row .col-12 .inner-actions .inner-action.inner-like.active {
+  color: #6e4888; /* Màu bạn muốn thay đổi khi nhấp vào */
+}
+.singer-detail .containner .row .col-12 .inner-actions .inner-action.inner-like.active i{
+  font-weight: 900;
+}
+
+/* btn heart */
+.singer-detail .containner .row .col-12 .inner-actions .inner-action{
+  cursor: pointer;
+}
+.singer-detail .containner .row .col-12 .inner-actions .inner-action.inner-heart.active {
+  
+  color:  #9b4ddf ;
+}
+.singer-detail .containner .row .col-12 .inner-actions .inner-action.inner-heart.active i{
+  font-weight: 900;
+}
+
+.singer-detail .containner .row .col-12 .inner-play {
+  display: flex;
+  flex-direction: column; /* Để các phần tử bên trong sắp xếp dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  margin: 0 auto; /* Đặt margin auto để căn giữa theo chiều ngang */
+  text-align: center; /* Căn nội dung trong .inner-play theo chiều ngang */
+  max-width: 600px; /* Điều chỉnh chiều rộng tối đa của .inner-play */
+  padding: 2rem; /* Đặt padding cho khoảng cách xung quanh .inner-play */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.singer-detail .containner .row .col-12 .inner-play .inner-avatar {
+  margin-bottom: 1rem; /* Khoảng cách giữa avatar và audio player */
+}
+
+.singer-detail .containner .row .col-12 .inner-play .inner-audio {
+  width: 100%; /* Chiều rộng của audio player */
+  max-width: 400px; /* Chiều rộng tối đa của audio player */
+}
+
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
+/* form-search */
+.form-search{
+  background-color: #2f2739 ;
+  border-radius: 22px 0px 0px 22px;
+  border: none;
+  color: #fff;
+}
+.form-control.form-search::placeholder {
+  color: white;
+  font-weight: 100;
+}
+.form-control.form-search:focus {
+  background-color: #34224f  ; 
+  color: #fff;
+  border: none;
+  outline: none; 
+}
+.btn-search{
+  border-radius: 0px 22px 22px 0px;
+  background-color: #9b4de0;
+  border: none;
+}
+.btn-search:hover{
+  background-color: 
+  #c273ed ;
+}
+/* end form-search */
+
+/* gợi ý tìm kiếm */
+.box-search{
+  position: relative;
+}
+.box-search .inner-suggest{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  background: #34224f ;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  z-index: 1;
+  overflow-y: auto;
+  display: none;
+}
+.box-search .inner-suggest.show{
+  display: block;
+}
+.box-search .inner-suggest .inner-item{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+.box-search .inner-suggest .inner-item:hover{
+  background: #2f2739  ;
+  text-decoration: none;
+}
+.box-search .inner-suggest .inner-item:last-child{
+  border-bottom: 0;
+}
+.box-search .inner-suggest .inner-item .inner-img{
+  width: 60px;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.box-search .inner-suggest .inner-item .inner-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box-search .inner-suggest .inner-item .inner-info{
+  flex:1 ;
+  margin-left: 10px;
+}
+.box-search .inner-suggest .inner-item .inner-info .inner-title{
+  text-decoration: none;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+
+}
+.box-search .inner-suggest .inner-item .inner-info .inner-singer{
+  font-size: 13px;
+  font-weight: 500;
+  color: #6f6382;
+  margin-bottom: 2px;
+  text-decoration: none;
+
+}
+/* end gợi ý tìm kiếm */
