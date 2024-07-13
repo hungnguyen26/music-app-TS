@@ -3,9 +3,12 @@ import { topicRouter } from "./topic.router";
 import { songsRouter } from "./songs.router";
 import { favoriteSongRouter } from "./favorite-songs.router";
 import { searchRouter } from "./search.roter";
+import { homeRouter } from "./home.roter";
 
 
 const clientRouter = (app: Express): void => {
+
+  app.use("/" ,homeRouter);
 
   app.use("/topics" ,topicRouter);
 
